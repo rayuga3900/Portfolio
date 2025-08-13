@@ -23,7 +23,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 ## Usage
 
-Feel free to explore the portfolio and contact me through the provided contact form. 
+Feel free to explore the portfolio and contact me through the provided contact. 
 ## Deploy
-This project is deployed using infinityfreeapp.com. Visit http://rayuga3900.infinityfreeapp.com/ to see the live site.
+This project is deployed using infinityfreeapp.com. Visit https://myportfolio-seven-flame.vercel.app/ to see the live site.
  
