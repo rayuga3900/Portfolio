@@ -88,24 +88,7 @@ th, td {
     height: auto;
     border-radius: 4px;
 }
-.icon-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
 
-.icon-links a {
-    font-size: 2.5rem; /* Make icons large */
-    color: #333;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.icon-links a:hover {
-    color: #0077cc; /* Accent color on hover */
-    transform: scale(1.2); /* Slight zoom */
-}
 /* Mobile view */
 @media (max-width: 768px) {
     .menu {
