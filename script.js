@@ -1,17 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-    const menuItems = document.querySelectorAll(".menu-item");
+<script>
+    const sections = document.querySelectorAll('main section');
+    const menuItems = document.querySelectorAll('.menu-item');
 
-    menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-    });
+    window.addEventListener('scroll', () => {
+        let current = '';
 
-    menuItems.forEach(item => {
-        item.addEventListener("click", () => {
-            menuItems.forEach(el => el.classList.remove("active"));
-            item.classList.add("active");
-            menu.classList.remove("active");
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 60; // offset for navbar height
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === '#' + current) {
+                item.classList.add('active');
+            }
         });
     });
-});
+</script>
