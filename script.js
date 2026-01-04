@@ -5,28 +5,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 
-    // Activate menu item based on scroll
+    // Function to update active menu based on scroll
     function activateMenu() {
-        const scrollPos = window.scrollY + 80; // offset for navbar height
-        let currentSectionId = sections[0].id; // default
+        let scrollPos = window.scrollY + 80; // navbar offset
+        let currentSection = sections[0].id;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-                currentSectionId = section.id;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                currentSection = section.id;
             }
         });
 
         menuItems.forEach(item => {
             item.classList.remove("active");
-            if (item.getAttribute("href") === "#" + currentSectionId) {
+            if (item.getAttribute("href") === "#" + currentSection) {
                 item.classList.add("active");
             }
         });
     }
 
-    // Smooth scroll on click & highlight active menu item
+    // Smooth scroll on menu click
     menuItems.forEach(item => {
         item.addEventListener("click", e => {
             e.preventDefault();
@@ -34,26 +35,27 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetSection = document.getElementById(targetId);
 
             window.scrollTo({
-                top: targetSection.offsetTop - 70, // offset for navbar
+                top: targetSection.offsetTop - 70, // navbar offset
                 behavior: "smooth"
             });
 
+            // Set active immediately
             menuItems.forEach(i => i.classList.remove("active"));
             item.classList.add("active");
 
-            // ✅ Close mobile menu if open
+            // Close mobile menu if open
             if (menu.classList.contains("show")) {
                 menu.classList.remove("show");
             }
         });
     });
 
-    // Hamburger toggle (mobile only)
+    // Hamburger toggle
     menuToggle.addEventListener("click", () => {
         menu.classList.toggle("show");
     });
 
-    // Run on scroll & page load
+    // Run on scroll and page load
     window.addEventListener("scroll", activateMenu);
     window.addEventListener("load", activateMenu);
 });
