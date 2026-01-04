@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             menuItems.forEach(i => i.classList.remove("active"));
             item.classList.add("active");
 
-            // Close mobile menu if open
+            // ✅ Close mobile menu if open
             if (menu.classList.contains("show")) {
                 menu.classList.remove("show");
             }
