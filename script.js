@@ -26,4 +26,12 @@ function activateMenu() {
 // Run on scroll and on page load
 window.addEventListener('scroll', activateMenu);
 window.addEventListener('load', activateMenu);
+
+// Also update active menu immediately on click
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menuItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
 </script>
