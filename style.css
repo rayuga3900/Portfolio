@@ -126,12 +126,6 @@ th {
     transform: translateY(-2px);
 }
 
-/* Mobile Menu Toggle */
-.menu {
-    display: flex;
-    gap: 15px;
-}
-
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -148,7 +142,12 @@ th {
     .menu-toggle {
         display: block;
     }
+
+    .menu-item {
+        padding: 10px 20px;
+    }
 }
+
 
 
 /* ===== Projects Container ===== */
