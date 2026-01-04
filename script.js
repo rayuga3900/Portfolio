@@ -1,23 +1,29 @@
 <script>
-    const sections = document.querySelectorAll('main section');
-    const menuItems = document.querySelectorAll('.menu-item');
+const sections = document.querySelectorAll('main section');
+const menuItems = document.querySelectorAll('.menu-item');
 
-    window.addEventListener('scroll', () => {
-        let current = '';
+function activateMenu() {
+    let scrollPos = window.scrollY + window.innerHeight / 2; // middle of the viewport
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 60; // offset for navbar height
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
+    let current = sections[0].id; // default to first section
 
-        menuItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === '#' + current) {
-                item.classList.add('active');
-            }
-        });
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            current = section.id;
+        }
     });
+
+    menuItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + current) {
+            item.classList.add('active');
+        }
+    });
+}
+
+// Run on scroll and on page load
+window.addEventListener('scroll', activateMenu);
+window.addEventListener('load', activateMenu);
 </script>
