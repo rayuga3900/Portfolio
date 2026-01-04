@@ -24,10 +24,12 @@
 
 <main>
     <!-- Home Section -->
-    <section id="home" class="content">
+    <section id="home">
         <img src="me2.png" alt="Anurag Tiwari Portrait" class="round-image">
-        <h1 class="typing-text">Anurag Tiwari</h1>
-        <button class="btn" onclick="window.open('Anurag_resume.pdf')">📄 View Resume</button>
+        <h1 class="typing-text" style="text-align:center;">Anurag Tiwari</h1>
+        <div style="text-align:center;">
+            <button class="btn" onclick="window.open('Anurag_resume.pdf')">📄 View Resume</button>
+        </div>
     </section>
 
     <!-- Work Experience -->
@@ -74,19 +76,17 @@
                 </tr>
             </tbody>
         </table>
-        <p style="font-size: 0.9rem; opacity: 0.8;">
-            <em>Entrance Exams:</em> JEE Main – 62.56 percentile | MHT-CET – 87.28 percentile
-        </p>
+        <p style="font-size:0.9rem; opacity:0.8;"><em>Entrance Exams:</em> JEE Main – 62.56 percentile | MHT-CET – 87.28 percentile</p>
     </section>
 
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
 
-    <!-- ML Projects Section -->
-    <h2 style="border-bottom: 3px solid #4CAF50; padding-bottom: 5px; margin-top: 20px;">🚀 Machine Learning Projects</h2>
-    <div class="projects-container">
-        <!-- 1. Power Consumption Prediction -->
+        <!-- ML Projects Section -->
+        <h2 class="ml-projects">🚀 Machine Learning Projects</h2>
+        <div class="projects-container">
+                  <!-- 1. Power Consumption Prediction -->
         <article class="project-card">
             <h3>
                 <a href="https://github.com/rayuga3900/power-consumption-predictor" target="_blank">
@@ -133,12 +133,12 @@
             </ul>
             <p><strong>Tech Stack:</strong> Python, scikit-learn, Streamlit, Docker</p>
         </article>
-    </div>
+        </div>
 
-    <!-- Other Projects Section -->
-    <h2 style="border-bottom: 3px solid #2196F3; padding-bottom: 5px; margin-top: 40px;">💻 Other Projects</h2>
-    <div class="projects-container">
-        <!-- AuthVerse -->
+        <!-- Other Projects Section -->
+        <h2 class="other-projects">💻 Other Projects</h2>
+        <div class="projects-container">
+              <!-- AuthVerse -->
         <article class="project-card">
             <h3>
                 <a href="https://github.com/rayuga3900/Three_Level_Authentication_System" target="_blank">
@@ -159,15 +159,14 @@
             <p>Android app with Admin, Teacher, and Student modules. Teachers upload lectures and students access them seamlessly.</p>
             <p><strong>Tech Stack:</strong> Java, Android Studio, Retrofit, Firebase, Glide, PHP, MySQL</p>
         </article>
-    </div>
-</section>
-
+        </div>
+    </section>
 
     <!-- Certificates -->
     <section id="certificates">
         <h2>Certificates</h2>
         <div class="certificates-container">
-            <div class="certificate-item">
+           <div class="certificate-item">
                 <h3>AI Certification</h3>
                 <p>Issued by Responsible AI for Youth</p>
                 <img src="./certificates/AI_certificate.png" alt="AI Certification">
@@ -209,7 +208,7 @@
         <p><i class="fab fa-github"></i> <a href="https://github.com/rayuga3900" target="_blank">GitHub</a></p>
         <p><i class="fab fa-telegram"></i> <a href="https://t.me/rayuga3900" target="_blank">Telegram</a></p>
     </section>
-
 </main>
+
 </body>
 </html>
