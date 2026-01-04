@@ -125,17 +125,27 @@ th {
     color: #FFD700;
     transform: translateY(-2px);
 }
-.menu-toggle {
-    display: none; /* hidden on desktop */
+/* Desktop navbar always visible */
+.menu {
+    display: flex !important;
+    gap: 15px;
 }
 
-/* ===== Mobile Menu ===== */
+.menu-toggle {
+    display: none;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .menu {
-        display: none;
+        display: none; /* hidden by default */
         flex-direction: column;
-        background-color: #1976D2; /* slightly darker blue for dropdown menu */
+        background-color: #2196F3;
         width: 100%;
+        position: absolute;
+        top: 60px; /* below navbar */
+        left: 0;
+        padding: 10px 0;
     }
 
     .menu.show {
@@ -144,7 +154,7 @@ th {
 
     .menu-toggle {
         display: block;
-        background-color: #2196F3; /* same as header */
+        background-color: #2196F3;
         border: none;
         color: white;
         font-size: 1.5rem;
@@ -158,12 +168,11 @@ th {
         color: white;
     }
 
-    .menu-item:hover,
-    .menu-item.active {
+    .menu-item.active,
+    .menu-item:hover {
         color: #FFD700; /* yellow highlight */
     }
 }
-
 
 /* ===== Projects Container ===== */
 .projects-container {
