@@ -42,6 +42,12 @@ menuItems.forEach(item => {
         }
     });
 });
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
 
 // Run on scroll and on page load
 window.addEventListener('scroll', activateMenu);
