@@ -127,13 +127,9 @@ th {
 }
 
 /* Mobile Menu Toggle */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
+.menu {
+    display: flex;
+    gap: 15px;
 }
 
 @media (max-width: 768px) {
@@ -153,6 +149,7 @@ th {
         display: block;
     }
 }
+
 
 /* ===== Projects Container ===== */
 .projects-container {
