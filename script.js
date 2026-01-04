@@ -5,16 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 
-    // Function to update active menu based on scroll
+    // Activate menu item based on scroll
     function activateMenu() {
-        let scrollPos = window.scrollY + 80; // navbar offset
+        let scrollPos = window.scrollY + 80; // offset for navbar
         let currentSection = sections[0].id;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
                 currentSection = section.id;
             }
         });
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Smooth scroll on menu click
+    // Smooth scroll + set active + close mobile menu
     menuItems.forEach(item => {
         item.addEventListener("click", e => {
             e.preventDefault();
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetSection = document.getElementById(targetId);
 
             window.scrollTo({
-                top: targetSection.offsetTop - 70, // navbar offset
+                top: targetSection.offsetTop - 70, // offset for navbar
                 behavior: "smooth"
             });
 
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             menuItems.forEach(i => i.classList.remove("active"));
             item.classList.add("active");
 
-            // Close mobile menu if open
+            // Close mobile menu after click
             if (menu.classList.contains("show")) {
                 menu.classList.remove("show");
             }
