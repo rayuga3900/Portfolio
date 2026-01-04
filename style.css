@@ -125,14 +125,13 @@ th {
     color: #FFD700;
     transform: translateY(-2px);
 }
-
+/* ===== Mobile Menu ===== */
 @media (max-width: 768px) {
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #2196F3;
+        background-color: #1976D2; /* slightly darker blue for dropdown menu */
         width: 100%;
-        padding: 10px 0;
     }
 
     .menu.show {
@@ -141,13 +140,25 @@ th {
 
     .menu-toggle {
         display: block;
+        background-color: #2196F3; /* same as header */
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     .menu-item {
         padding: 10px 20px;
+        color: white;
+    }
+
+    .menu-item:hover,
+    .menu-item.active {
+        color: #FFD700; /* yellow highlight */
     }
 }
-
 
 
 /* ===== Projects Container ===== */
