@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +18,7 @@
         <a href="#experience" class="menu-item">Experience</a>
         <a href="#projects" class="menu-item">Projects</a>
         <a href="#certificates" class="menu-item">Certificates</a>
-        <a href="#contact" class="menu-item">Contact Me</a>
+        <a href="#contact" class="menu-item">Contact</a>
     </nav>
 </header>
 
@@ -30,86 +29,106 @@
         <h1 class="typing-text">Anurag Tiwari</h1>
         <button class="btn" onclick="window.open('Anurag_resume.pdf')">📄 View Resume</button>
     </section>
-    
-<!-- Work Experience -->
-<section id="experience">
-    <h2>Work Experience</h2>
-    
-    <article class="job">
-        <h3>Software Developer — Itedium</h3>
-        <p><em>Oct 2024 – Present</em></p>
-        <ul>
-            <li>Worked with <strong>Symfony 1.x</strong> and <strong>Laravel 7</strong> on internal healthcare platforms</li>
-            <li>Maintained and improved <strong>834 EDI file processing</strong> to ensure accurate attribute loading and data integrity</li>
-            <li>Implemented UI enhancements and bug fixes using <strong>HTML, CSS, JavaScript, and AJAX</strong></li>
-            <li>Developed domain knowledge in <strong>health insurance systems</strong> and compliance workflows</li>
-            <li>Collaborated in an Agile environment using <strong>Git</strong>, <strong>JIRA</strong>, and team-based development practices</li>
-        </ul>
-    </article>
-</section>
 
+    <!-- Work Experience -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <article class="job">
+            <h3>Software Developer — Itedium</h3>
+            <p><em>Oct 2024 – Present</em></p>
+            <ul>
+                <li>Worked with <strong>Symfony 1.x</strong> and <strong>Laravel 7</strong> on internal healthcare platforms</li>
+                <li>Maintained and improved <strong>834 EDI file processing</strong> ensuring accurate attribute loading</li>
+                <li>Implemented UI enhancements and bug fixes using <strong>HTML, CSS, JavaScript, and AJAX</strong></li>
+                <li>Collaborated in Agile environment using <strong>Git</strong> and <strong>JIRA</strong></li>
+            </ul>
+        </article>
+    </section>
 
     <!-- About Section -->
     <section id="about">
-     <h2>Educational Qualifications</h2>
-            <table>
-              <thead>
+        <h2>Educational Qualifications</h2>
+        <table>
+            <thead>
                 <tr>
-                  <th>Level</th>
-                  <th>Institution</th>
-                  <th>Grade</th>
+                    <th>Level</th>
+                    <th>Institution</th>
+                    <th>Grade</th>
                 </tr>
-              </thead>
-              <tbody>
+            </thead>
+            <tbody>
                 <tr>
-                  <td>SSC</td>
-                  <td>Pancham English High School</td>
-                  <td>84%</td>
-                </tr>
-                <tr>
-                  <td>HSC</td>
-                  <td>Kanchan Junior College</td>
-                  <td>82.15%</td>
+                    <td>SSC</td>
+                    <td>Pancham English High School</td>
+                    <td>84%</td>
                 </tr>
                 <tr>
-                  <td>B.Sc IT</td>
-                  <td>Annasaheb Vartak College</td>
-                  <td>9.68 / 10 CGPA</td>
+                    <td>HSC</td>
+                    <td>Kanchan Junior College</td>
+                    <td>82.15%</td>
                 </tr>
-              </tbody>
-            </table>
-        </div>
-
-       <p style="font-size: 0.9rem; opacity: 0.8;">
-    <em>Entrance Exams:</em> JEE Main – 62.56 percentile | MHT-CET – 87.28 percentile
-</p>
-
+                <tr>
+                    <td>B.Sc IT</td>
+                    <td>Annasaheb Vartak College</td>
+                    <td>9.68 / 10 CGPA</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 0.9rem; opacity: 0.8;">
+            <em>Entrance Exams:</em> JEE Main – 62.56 percentile | MHT-CET – 87.28 percentile
+        </p>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
 
+        <!-- Project 1 -->
         <article>
             <h3>
-                <a href="https://github.com/rayuga3900/Three_Level_Authentication_System" target="_blank">
-                    1. AuthVerse — Three Level Authentication System
+                <a href="https://github.com/rayuga3900/Power-Consumption-Predictor" target="_blank">
+                    1. Power Consumption Prediction App
                 </a>
             </h3>
-            <p>Architected a multi-level authentication system using Text, Color, and Image passwords. User-friendly interfaces 
-               for admin, client, and developer roles.</p>
-            <p><strong>Technology Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+            <p>Predicted household electricity consumption using historical electrical measurements, time-based features, and lag variables.</p>
+            <ul>
+                <li><strong>Algorithm:</strong> Random Forest Regressor</li>
+                <li><strong>Preprocessing:</strong> Median imputation, feature selection with Mutual Information</li>
+                <li><strong>Metrics:</strong> R² = 0.9987, RMSE = 0.0329</li>
+                <li><strong>Deployment:</strong> Streamlit UI for single & batch predictions, Docker containerized</li>
+            </ul>
         </article>
 
+        <!-- Project 2 -->
         <article>
             <h3>
-                <a href="https://github.com/rayuga3900/Elearning.git" target="_blank">
-                    2. Elearning App
+                <a href="https://github.com/rayuga3900/Customer-Churn-Predictor" target="_blank">
+                    2. Telco Customer Churn Predictor
                 </a>
             </h3>
-            <p>Android app with Admin, Teacher, and Student modules. Teachers can upload lectures and notes; 
-               students can access them seamlessly.</p>
-            <p><strong>Technology Stack:</strong> Java, Android Studio, Retrofit, Firebase, Glide, PHP, MySQL</p>
+            <p>Predicted telecom customer churn using demographic, service, and billing features.</p>
+            <ul>
+                <li><strong>Algorithm:</strong> Random Forest Classifier</li>
+                <li><strong>Preprocessing:</strong> Imputation, scaling, one-hot encoding, class imbalance handling</li>
+                <li><strong>Metrics:</strong> ROC-AUC = 0.87, Accuracy = 82%</li>
+                <li><strong>Deployment:</strong> Streamlit UI for single & batch predictions, Dockerized for production</li>
+            </ul>
+        </article>
+
+        <!-- Project 3 -->
+        <article>
+            <h3>
+                <a href="https://github.com/rayuga3900/Titanic-Survival-Predictor" target="_blank">
+                    3. Titanic Survival Predictor
+                </a>
+            </h3>
+            <p>Predicted Titanic passenger survival using demographic and travel information with feature engineering.</p>
+            <ul>
+                <li><strong>Algorithm:</strong> Decision Tree Classifier</li>
+                <li><strong>Preprocessing:</strong> Median & most frequent imputation, power transformation, one-hot encoding</li>
+                <li><strong>Metrics:</strong> Accuracy = 82.3%, ROC-AUC = 0.87</li>
+                <li><strong>Deployment:</strong> Streamlit app with single & batch prediction, Dockerized</li>
+            </ul>
         </article>
     </section>
 
@@ -147,24 +166,19 @@
                 <p>Issued by Vartak College</p>
                 <img src="./certificates/linux_certificate.png" alt="Linux Certification">
             </div>
-            <div class="certificate-item">
-                <h3>Three Level Authentication Certification</h3>
-                <p>Issued by Vartak College</p>
-                <img src="./certificates/3lvlauth_certificate.png" alt="Three Level Authentication Certification">
-            </div>
         </div>
     </section>
 
-<!-- Contact -->
-<section id="contact">
-    <h2>Contact Information</h2>
-    <p><i class="fas fa-phone"></i> +91 8689828704</p>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:princeanu27@gmail.com">princeanu27@gmail.com</a></p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anuragtiwari3900" target="_blank">LinkedIn</a></p>
-    <p><i class="fab fa-github"></i> <a href="https://github.com/rayuga3900" target="_blank">GitHub</a></p>
-    <p><i class="fab fa-telegram"></i> <a href="https://t.me/rayuga3900" target="_blank">Telegram</a></p>
-</section>
-
-
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p><i class="fas fa-phone"></i> +91 8689828704</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:princeanu27@gmail.com">princeanu27@gmail.com</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anuragtiwari3900" target="_blank">LinkedIn</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/rayuga3900" target="_blank">GitHub</a></p>
+        <p><i class="fab fa-telegram"></i> <a href="https://t.me/rayuga3900" target="_blank">Telegram</a></p>
+    </section>
 
 </main>
+</body>
+</html>
