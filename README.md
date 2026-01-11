@@ -25,5 +25,5 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 Feel free to explore the portfolio and contact me through the provided contact. 
 ## Deploy
-This project is deployed using infinityfreeapp.com. Visit https://myportfolio-seven-flame.vercel.app/ to see the live site.
+This project is deployed using vercel. Visit https://myportfolio-seven-flame.vercel.app/ to see the live site.
  
