@@ -108,10 +108,36 @@
         <h2>Projects</h2>
 
       <!-- ML Projects Section -->
-<h2 class="ml-projects">🚀 Machine Learning Projects</h2>
+<h2 class="ml-projects">🚀 AI & Machine Learning Projects</h2>
 <div class="projects-container">
+    <!-- 1. GitWise AI -->
+<article class="project-card">
+    <h3>
+        <a href="https://gitwiseai.streamlit.app/" target="_blank">
+            GitWise AI — GitHub Repository Q&A System
+        </a>
+    </h3>&nbsp;
 
-    <!-- 1. Power Consumption Prediction -->
+    <p>Built a Retrieval-Augmented Generation (RAG) system to answer natural language questions on GitHub repositories.</p>
+
+    <ul>
+        <li><strong>Core System:</strong> Designed pipeline for repository ingestion, code chunking, and embedding generation.</li>
+
+        <li><strong>Retrieval:</strong> Implemented hybrid search using MiniLM embeddings with BGE reranker for high-quality results.</li>
+
+        <li><strong>LLM Integration:</strong> Used Groq LLM to generate context-aware answers from retrieved code snippets.</li>
+
+        <li><strong>Database:</strong> Used Qdrant vector database for efficient semantic search with metadata filtering.</li>
+
+        <li><strong>Architecture:</strong> Built modular system with separate ingestion, retrieval, and response layers.</li>
+
+        <li><strong>Evaluation:</strong> Created evaluation pipeline to measure retrieval accuracy and response quality.</li>
+
+        <li><strong>Tech Stack:</strong> Python, FastAPI, LangChain, SentenceTransformers, Qdrant, Groq LLM, Streamlit, Docker</li>
+    </ul>
+</article>
+
+    <!-- 2. Power Consumption Prediction -->
     <article class="project-card">
         <h3>
             <a href="https://a-power-consumption.streamlit.app/" target="_blank">
@@ -134,7 +160,7 @@
         </ul>
     </article>
 
-    <!-- 2. Telco Customer Churn Prediction -->
+    <!-- 3. Telco Customer Churn Prediction -->
     <article class="project-card">
         <h3>
             <a href="https://a-customer-churn.streamlit.app/" target="_blank">
@@ -157,7 +183,7 @@
         </ul>
     </article>
 
-    <!-- 3. Titanic Survival Predictor -->
+    <!-- 4. Titanic Survival Predictor -->
     <article class="project-card">
         <h3>
             <a href="https://a-titanic.streamlit.app/" target="_blank">
